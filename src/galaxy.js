@@ -5,7 +5,7 @@ class Galaxy {
   /**
    * Creates a galaxy.
    * @param {number} size - Number of particles to be created in galaxy
-   * @param {Gauge} gauge - speed gauge
+   * @param {Gauge} gauge - Speed gauge
    */
   constructor(size, gauge) {
     this.size = size;
