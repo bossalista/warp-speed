@@ -11,20 +11,21 @@ let galaxy;
 
 /**
  * Initializes sketch.
-*/
+ */
 function setup() {
-    galaxy = new Galaxy(1000);
+  galaxy = new Galaxy(1000);
 
-    createCanvas(BASE_SIZE, BASE_SIZE);
+  var canvas = createCanvas(BASE_SIZE, BASE_SIZE);
+  canvas.parent("sketch-holder");
 }
 
 /**
  * Sketch main loop.
  */
 function draw() {
-    background(0);
-    translate(width / 2, height / 2);
+  background(0);
+  translate(width / 2, height / 2);
 
-    galaxy.update();
-    galaxy.draw();
+  galaxy.update();
+  galaxy.draw();
 }

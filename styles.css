@@ -1,0 +1,74 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+main {
+  background: #333;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-itens: center;
+  justify-content: center;
+  font-family: "Lucida Grande";
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 15px;
+  padding: 25px 25px 15px 25px;
+  background: #3d3d3d;
+  color: rgb(187, 187, 187);
+}
+
+h1 {
+  font-size: 18.15px;
+  font-weight: 700;
+  margin-top: 12px;
+  margin-bottom: 18px;
+}
+
+p {
+  font-size: 11px;
+  line-height: 16.5px;
+  margin-bottom: 11px;
+}
+a {
+  color: rgb(205, 205, 205);
+}
