@@ -21,10 +21,12 @@ class Particle {
     randomizeColor() {
         const r = random(0, 1);
 
-        if (r < 0.05)
-            return lerpColor(color(255, 255, 255), color(0, 0, 255), random(0.1, 0.25));
-        else if (r >= 0.05 && r < 0.1)
-            return lerpColor(color(255, 255, 255), color(255, 255, 0), random(0.1, 0.25));
+        if (r < 0.1)
+            return lerpColor(color(255, 255, 255), color(0, 0, 255), random(0.1, 0.5));
+        else if (r >= 0.1 && r < 0.2)
+            return lerpColor(color(255, 255, 255), color(255, 255, 0), random(0.1, 0.5));
+        else if (r >= 0.3 && r < 0.4)
+            return lerpColor(color(255, 255, 255), color(255, 0, 0), random(0.1, 0.5));
         return color(255, 255, 255);
     }
 
