@@ -12,7 +12,7 @@ let galaxy;
  * Initializes sketch.
 */
 function setup() {
-    galaxy = new Galaxy(500);
+    galaxy = new Galaxy(1000);
 
     createCanvas(BASE_SIZE, BASE_SIZE);
 }

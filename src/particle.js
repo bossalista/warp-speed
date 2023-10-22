@@ -6,12 +6,20 @@ class Particle {
      * Creates a particle.
      */
     constructor() {
+        this.init();
+    }
+
+    /**
+     * Initializes particle state.
+     */
+    init() {
         this.x = random(-BASE_SIZE / 2, BASE_SIZE / 2);
         this.y = random(-BASE_SIZE / 2, BASE_SIZE / 2);
 
         this.color = this.randomizeColor();
 
         this.offset = random(BASE_SIZE);
+        this.previousOffset = this.offset;
     }
 
     /**
@@ -34,13 +42,11 @@ class Particle {
      * Updates particle state.
      */
     update() {
-        this.offset -= 5;
+        this.previousOffset = this.offset;
+        this.offset -= 4;
 
         if (this.offset <= 0) {
-            this.x = random(-BASE_SIZE / 2, BASE_SIZE / 2);
-            this.y = random(-BASE_SIZE / 2, BASE_SIZE / 2);
-
-            this.offset = random(BASE_SIZE);
+            this.init();
         }
     }
 
@@ -53,6 +59,14 @@ class Particle {
         const x = map(this.x / this.offset, 0, 1, 0, width);
         const y = map(this.y / this.offset, 0, 1, 0, height);
 
-        ellipse(x, y, map(this.offset, 0, BASE_SIZE, 5, 1));
+        ellipse(x, y, map(this.offset, 0, BASE_SIZE, 2, 1));
+
+        strokeWeight(map(this.offset, 0, BASE_SIZE, 2, 1));
+        stroke(this.color);
+
+        const px = map(this.x / this.previousOffset, 0, 1, 0, width);
+        const py = map(this.y / this.previousOffset, 0, 1, 0, height);
+
+        line(x, y, px, py);
     }
 }
