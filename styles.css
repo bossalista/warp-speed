@@ -42,7 +42,7 @@ main {
   width: 100%;
   min-height: 100vh;
   display: flex;
-  align-itens: center;
+  align-items: center;
   justify-content: center;
   font-family: "Lucida Grande";
 }
