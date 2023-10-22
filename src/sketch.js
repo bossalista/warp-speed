@@ -2,6 +2,7 @@
  * Constants.
  */
 const BASE_SIZE = 600;
+const SPEED = 4;
 
 /**
  * Sketch variables initialization.
