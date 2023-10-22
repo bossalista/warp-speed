@@ -10,6 +10,7 @@
 
 body {
   -webkit-font-smoothing: antialiased;
+  background: #333;
 }
 
 img,
@@ -38,7 +39,6 @@ h6 {
 }
 
 main {
-  background: #333;
   width: 100%;
   min-height: 100vh;
   display: flex;
